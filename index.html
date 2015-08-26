@@ -10,13 +10,26 @@
   <!-- Bootstrap Optional CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-  <title>Wine App</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+  <title>SBelser Wine App</title>
 
   <base href="/">
 
 </head>
 
 <body ng-controller="WinesCtrl">
+
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" ng-href="http://www.sswbelser.com">Made by SSWBelser</a>
+      </div>
+    </div>
+  </nav>
+</header>
 
   <div ng-view></div>
 
@@ -33,10 +46,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <!-- Controller Scripts -->
-  <script src="controllers.js"></script>
+  <script src="./controllers.js"></script>
 
   <!-- Route Scripts -->
-  <script src="app.js"></script>
+  <script src="./app.js"></script>
 
 </body>
 </html>

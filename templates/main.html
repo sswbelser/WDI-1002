@@ -1,12 +1,11 @@
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2 class="text-center">Wine App</h2>
-        <hr>
-
+      <h2 class="text-center">Wine App</h2>
+      <hr>
+      <div class="col-sm-4 well wine-column">
         <!-- form to create new wine -->
-        <h4>Add New Wine</h4>
-        <form ng-submit="createWine()">
+        <h4 class="new-wine-title">Add New Wine</h4>
+        <form ng-submit="createWine()" class="wine-form">
           <div class="form-group">
             <input type="text" ng-model="wine.name" class="form-control" placeholder="Name" autofocus>
           </div>
@@ -28,15 +27,16 @@
           <div class="form-group">
             <input type="text" ng-model="wine.picture" class="form-control" placeholder="Picture">
           </div>
-          <input type="submit" value="Save Wine" class="btn btn-default">
+          <input type="submit" value="Save Wine" class="btn btn-primary save-wine-button">
         </form>
-        <hr>
+      </div>
+      <div class="col-sm-8 wine-column">
 
         <!-- show all wines -->
         <div ng-repeat="wine in wines">
           <div class="row">
             <div class="col-xs-4">
-              <img ng-src="{{wine.picture}}" class="img-responsive">
+              <img ng-src="{{wine.picture}}" class="img-responsive wine-picture">
             </div>
             <div class="col-xs-8">
 
@@ -50,8 +50,8 @@
                 <p><strong>Price:</strong> ${{wine.price}}</p>
 
                 <!-- edit/delete buttons -->
-                <a ng-click="wine.editForm = true" href="javascript:void(0)" class="btn btn-default">Edit</a>
-                <a ng-click="deleteWine(wine)" href="javascript:void(0)" class="btn btn-default">Delete</a>
+                <a ng-click="wine.editForm = true" href="javascript:void(0)" class="btn btn-warning">Edit</a>
+                <a ng-click="deleteWine(wine)" href="javascript:void(0)" class="btn btn-danger">Delete</a>
               </div>
 
               <!-- form to edit wine -->
