@@ -4,7 +4,7 @@
       <hr>
       <div class="col-sm-4 well wine-column">
         <!-- form to create new wine -->
-        <h4 class="new-wine-title">Add New Wine</h4>
+        <h4 class="new-wine-title">Add a New Wine</h4>
         <form ng-submit="createWine()" class="wine-form">
           <div class="form-group">
             <input type="text" ng-model="wine.name" class="form-control" placeholder="Name" autofocus>
@@ -25,7 +25,7 @@
             <input type="text" ng-model="wine.price" class="form-control" placeholder="Price">
           </div>
           <div class="form-group">
-            <input type="text" ng-model="wine.picture" class="form-control" placeholder="Picture">
+            <input type="text" ng-model="wine.picture" class="form-control" placeholder="Picture URL">
           </div>
           <input type="submit" value="Save Wine" class="btn btn-primary save-wine-button">
         </form>
